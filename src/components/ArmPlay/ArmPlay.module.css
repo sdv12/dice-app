@@ -1,0 +1,25 @@
+.armWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  margin: 0px;
+  padding-bottom: 55px;
+}
+
+.bar {
+  width: 8px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: height 0.2s linear;
+}
+
+.ball {
+  width: 24px;
+  height: 24px;
+  background-color: #f00;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  margin-top: 6px;
+}

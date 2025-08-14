@@ -1,13 +1,34 @@
-body {
+:root {
+  --color-primary: #ff4b91;
+  --color-secondary: #fdbf33;
+  --color-dark: #2a1233;
+  --color-dark-gradient: linear-gradient(135deg, #2a1233 0%, #4a1a5a 100%);
+  --color-text: #ffffff;
+    --container-max: 720px;            /* ancho máx. de contenido */
+  --side-pad: clamp(12px, 4vw, 24px);/* padding responsivo lateral */
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-dark-gradient);
+  color: var(--color-text);
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden; /* 🔹 Evita scroll horizontal */
+}
+
+* {
+  box-sizing: border-box; /* 🔹 Hace que padding/border no rompan el ancho */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.light-theme {
+  --color-dark: #f5f5f5;
+  --color-dark-gradient: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  --color-text: #333333;
 }

@@ -1,0 +1,11 @@
+/* src/components/Prenda.module.css */
+.prenda {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4b91;
+  background-color: rgba(255, 75, 145, 0.15);
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  border: 2px solid #ff4b91;
+  margin-top: 1rem;
+}

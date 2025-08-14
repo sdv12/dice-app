@@ -1,0 +1,21 @@
+.container {
+  text-align: center;
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 7rem;
+  font-weight: 200;
+  margin: 0;
+  color: #e4546d; /* rosa fuerte */
+  letter-spacing: 5px;
+}
+
+.subtitle {
+  font-family: 'Pacifico', cursive;
+  font-size: 65px;
+  font-weight: 100;
+  margin-top: -4.5rem;
+  margin-left: 8px;
+  color: #f2b974; /* mostaza dorado suave */
+}

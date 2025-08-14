@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 0; /* eliminamos el desplazamiento fijo */
+  padding: 0 1rem;
+  max-width: 100%;
+}
+
+.slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 125px;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Estilo principal: fondo oscuro */
+.slotPrimary {
+  background: #73286d;
+  color: white;
+  border: 7px solid #ef476f;
+}
+
+/* Estilo secundario: fondo claro */
+.slotSecondary {
+  background: #fbc471;
+  color: #c72e6b;
+  border: 7px solid #563773;
+
+    box-shadow:
+    inset 0 0 10px 3px #c53549, 
+    0 2px 6px rgba(0, 0, 0, 0.05); 
+}
+
+.emoji {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.text {
+  font-weight: bold;
+}

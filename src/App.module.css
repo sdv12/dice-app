@@ -1,0 +1,71 @@
+/* src/App.module.css */
+.appContainer {
+  background-color: #1b1523;
+  color: #fff;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+}
+
+/* Estilo para Medio */
+.medio {
+  background: linear-gradient(180deg, #ffede0, #ffe2c4);
+  color: #d64900;
+}
+
+.medioButton {
+  background-color: #d64900;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.medioButton:hover {
+  transform: scale(1.05);
+  background-color: #a33a00;
+}
+
+/* Estilo para Hot */
+.hot {
+  background: radial-gradient(circle at center, #1a000a 0%, #000000 100%);
+  color: #ff1e1e;
+  background-image: url('/images/hot-texture.png'); /* 🔥 Ideal si agregás una textura sutil de fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hotButton {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #ff1e1e;
+  border: 2px solid #ff1e1e;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(255, 30, 30, 0.6);
+  transition: transform 0.2s ease, background 0.3s ease;
+  text-shadow: 0 0 6px #ff1e1e;
+}
+
+.hotButton:hover {
+  transform: scale(1.07);
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+

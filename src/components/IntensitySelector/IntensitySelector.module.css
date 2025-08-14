@@ -1,0 +1,46 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.modal {
+  background: #fff0f3;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  h3 {
+    margin-bottom: 1rem;
+    color: #d62857;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      margin: 0.3rem 0;
+      cursor: pointer;
+      background: #ffd6e0;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #ffa4bb;
+      }
+
+      &.active {
+        background: #ff6b81;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}

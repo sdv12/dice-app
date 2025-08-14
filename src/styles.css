@@ -1,0 +1,305 @@
+.app {
+  min-height: 100svh; /* respeta safe areas en móviles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: var(--side-pad);
+  overflow-x: hidden; /* cinturón de seguridad extra */
+}
+
+/* Envolvente para centrar y limitar contenido */
+.app > .page {
+  width: min(100%, var(--container-max));
+  margin-inline: auto;
+}
+
+/* Evitar que algún 100vw/transform desborde */
+img, video, canvas, svg { max-width: 100%; height: auto; display: block; }
+[style*="width: 100vw"] { width: 100% !important; }
+
+/* Modo suave */
+.app.intensity-suave {
+  background: #fcebe3;
+  color: #4b2666;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Títulos */
+.intensity-suave h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #d94d65;
+  text-align: center;
+}
+
+.intensity-suave h2 {
+  font-family: 'Pacifico', cursive;
+  color: #f2a965;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Cuadros de slot */
+.intensity-suave .slot {
+  background: #fcd3cc;
+  border-radius: 12px;
+  border: 3px solid #e9a1b0;
+  box-shadow: none;
+  color: #5d2e46;
+  padding: 1.5rem;
+}
+
+/* Botón ROLL */
+.intensity-suave .rollButton {
+  background: #fcd3cc;
+  color: #4b2666;
+  border: none;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.intensity-suave .rollButton:hover {
+  background: #f9b9b3;
+  transform: scale(1.05);
+}
+
+/* Contenedor de historial */
+.intensity-suave .historyContainer {
+  background: #f5d9d0;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #4b2666;
+  font-weight: 500;
+}
+
+.intensity-suave .historyContainer h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Switches y labels */
+.intensity-suave label {
+  color: #4b2666;
+}
+
+/* Modal personalizado (Setup) */
+.intensity-suave .modal {
+  background-color: #ffece6;
+  border: 2px solid #eab8b8;
+  color: #4b2666;
+}
+
+.bigHeader {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.level {
+  margin-left: 95px;
+}
+
+.bigHeader .level .p {
+  margin: 0px;
+}
+
+.ArmSlots {
+  display: flex;
+}
+
+.startChallenge {
+  background: #f7d3c7;
+  color: #6f3b5b;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.startChallenge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(252, 176, 69, 0.9);
+}
+
+.initChallenge {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  ;
+}
+
+/* Fondo general */
+.atrevidoBackground {
+  background: linear-gradient(to bottom right, #7f00ff, #e100ff);
+  color: #fff;
+}
+
+/* Estilos para botones */
+.atrevidoButton {
+  background-color: #ff5cad;
+  border: 2px solid #fff;
+  color: #fff;
+  box-shadow: 0 0 10px #ff5cad;
+}
+
+.atrevidoButton:hover {
+  background-color: #ff85c1;
+  transform: scale(1.05);
+}
+
+/* Fondo general */
+.hotBackground {
+  background: linear-gradient(to bottom right, #ff0033, #9e0031);
+  color: #fff;
+}
+
+/* Botones */
+.hotButton {
+  background-color: #ffbf00;
+  color: #9e0031;
+  border: 2px solid #fff;
+  box-shadow: 0 0 12px #ffbf00;
+}
+
+.hotButton:hover {
+  background-color: #ffe066;
+  transform: scale(1.05);
+}
+
+/* 🔥 Modo Picante */
+.app.intensity-hot {
+  background-color: #000;
+  color: #ff0000;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Títulos principales */
+.intensity-hot h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ff0000;
+  text-align: center;
+}
+
+.intensity-hot h2 {
+  font-family: 'Pacifico', cursive;
+  color: #ff0000;
+  text-align: center;
+
+}
+
+/* Checkbox labels */
+.intensity-hot label {
+  color: #ff0000;
+  font-weight: 500;
+}
+
+.intensity-hot .slot {
+  background: transparent;
+  border: 3px solid #ff0000;
+  color: #ff0000;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+/* Botón ROLL e INICIAR DESAFÍO */
+.intensity-hot .rollButton,
+.intensity-hot .startChallenge {
+  background: transparent;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  padding: 0.8rem 2rem;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+.intensity-hot .rollButton:hover,
+.intensity-hot .startChallenge:hover {
+  background-color: #1a0000;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+/* Turno de jugador */
+.intensity-hot .turnIndicator {
+  background: #1a0000;
+  color: #ff0000;
+  border-radius: 12px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.intensity-hot label {
+  color: #ff2d2d;
+}
+
+/* Historial */
+.intensity-hot .historyContainer {
+  background: transparent;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.app.intensity-hot {
+  background: linear-gradient(to bottom right, #1a0005, #440000);
+  color: #ff2d2d;
+  font-family: 'Poppins', sans-serif;
+}
+
+.intensity-hot .slot {
+  background: rgba(255, 0, 0, 0.05);
+  border: 2px solid #ff2d2d;
+  color: #ff2d2d;
+  box-shadow: 0 0 12px #ff2d2d;
+}
+
+/* Modal */
+.intensity-hot .modal {
+  background-color: #0a0000;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+}
+
+/* Menu desplegable */
+.intensity-hot .dropdownMenu {
+  background: #0a0000;
+  border: 2px solid #ff0000;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Botones de menú */
+.intensity-hot .menuItem {
+  color: #ff0000;
+}
+
+.intensity-hot .menuItem:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Checkbox personalizado */
+.intensity-hot input[type='checkbox'] {
+  accent-color: #ff0000;
+}
+
+
