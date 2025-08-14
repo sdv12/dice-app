@@ -56,6 +56,7 @@ const AppContent = () => {
       console.log('Cambiando turno a:', newIndex, players[newIndex]);
       return newIndex;
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [players.length]);
 
   const handleRollComplete = (result: RollResult) => {
