@@ -4,15 +4,15 @@ import { CountdownFireProps, FireSize } from '../../types/componentsTypes';
 
 const CountdownFire: React.FC<CountdownFireProps> = ({ 
   isActive, 
-  duration = 10, 
+  duration = 90, 
   onComplete 
 }) => {
   const [secondsLeft, setSecondsLeft] = useState<number>(duration);
   const [fireSize, setFireSize] = useState<FireSize>('hidden');
 
   const updateFireSize = useCallback((seconds: number) => {
-    if (seconds > 7) setFireSize('large');
-    else if (seconds > 4) setFireSize('medium');
+    if (seconds > 60) setFireSize('large');
+    else if (seconds > 30) setFireSize('medium');
     else if (seconds > 0) setFireSize('small');
   }, []);
 

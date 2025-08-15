@@ -1,9 +1,7 @@
 .fireContainer {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2rem 0;
   transition: all 0.3s ease;
 }
 

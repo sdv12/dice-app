@@ -4,13 +4,10 @@ import styles from './SlotMachine.module.css';
 import { ACTIONS as LEVEL_ACTIONS, TARGETS as LEVEL_TARGETS, EMOJIS } from '../../data/intensityLevels';
 import { SlotMachineProps, RollResult, IntensityLevel } from '../../types/componentsTypes';
 
-const DEFAULT_ACTIONS = ['Besar', 'Lamer', 'Acariciar', 'Soplar', 'Morder', 'Chupar'];
-const DEFAULT_ZONES = ['Cuello', 'Oreja', 'Labios', 'Pecho', 'Espalda', 'Muslos'];
 
 const SlotMachine: React.FC<SlotMachineProps> = ({ 
   onRollComplete, 
   customData, 
-  extraEnabled,
   isRolling,
   stopRolling,
   intensity = 'medio'
@@ -20,8 +17,8 @@ const SlotMachine: React.FC<SlotMachineProps> = ({
   const [emoji, setEmoji] = useState<string>('🎲');
 
   // 1. Primero usamos customData si existe, luego por intensidad, luego default
-  const ACTIONS = customData?.actions || LEVEL_ACTIONS[intensity as IntensityLevel] || DEFAULT_ACTIONS;
-  const ZONES = customData?.zones || LEVEL_TARGETS[intensity as IntensityLevel] || DEFAULT_ZONES;
+  const ACTIONS = customData?.actions || LEVEL_ACTIONS[intensity as IntensityLevel] 
+  const ZONES = customData?.zones || LEVEL_TARGETS[intensity as IntensityLevel] 
 
   const roll = useCallback(() => {
     const rolls = 5;
